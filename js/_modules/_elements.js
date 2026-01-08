@@ -12,50 +12,20 @@ export const elements = function () {
   header_menu.classList.add("header_menu");
   header_menu.setAttribute("aria-label", "Main navigation");
 
-  const header_menu_element = (name, url = "#", external = false) => {
-    const anchor = document.createElement("a");
-    anchor.textContent = name;
-    anchor.href = url;
+  const aboutMe = document.createElement("div");
+  aboutMe.classList.add("aboutMe");
 
-    if (external) {
-      anchor.target = "_blank";
-      anchor.rel = "noopener noreferrer";
-    }
-
-    return anchor;
-  };
-
-  const menuItems = [
-    { name: "home", url: "/" },
-    {
-      name: "algemene voorwaarden",
-      url: "../../pages/algemeneVoorwaarden.html",
-    },
-    {
-      name: "github",
-      url: "https://github.com/mikeOttenhoff",
-      external: true,
-    },
-  ];
-
-  menuItems.forEach(item => {
-    header_menu.append(header_menu_element(item.name, item.url, item.external));
-  });
-
-  const header_aboutMe = document.createElement("div");
-  header_aboutMe.classList.add("aboutMe");
-
-  header.append(header_menu, header_aboutMe);
+  header.append(header_menu);
 
   //content
   const article = document.createElement("article");
-  article.classList.add("content");
+  article.classList.add("content_container");
 
   // footer
   const footer = document.createElement("footer");
   footer.classList.add("footer");
 
-  container.append(header, article, footer);
+  container.append(header, aboutMe, article, footer);
 
   body.append(container);
 };
