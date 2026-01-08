@@ -1,0 +1,16 @@
+/* Color Theme Swatches in RGBA */
+$Mode-1-rgba: rgba(241, 242, 239, 1);
+$Mode-1_1-rgba: rgba(220, 220, 220, 1);
+$Mode-1_2-rgba: rgba(200, 200, 200, 1);
+$Mode-1_3-rgba: rgba(150, 150, 150, 1);
+$Mode-2-rgba: rgba(1, 34, 38, 1);
+$Mode-3-rgba: rgba(3, 63, 63, 1);
+$Mode-4-rgba: rgba(2, 89, 80, 1);
+$Mode-5-rgba: rgba(2, 114, 94, 1);
+$Mode-6-rgba: rgba(191, 191, 191, 1);
+
+$gradient-bg: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.9),
+  rgba(0, 0, 0, 0.6)
+);
