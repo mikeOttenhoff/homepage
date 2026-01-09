@@ -82,8 +82,7 @@ a {
   all: unset;
 }
 
-/* Color Theme Swatches in RGBA */
 body {
-  background-color: rgb(2, 89, 80);
+  background-color: rgb(150, 150, 150);
   position: relative;
 }
