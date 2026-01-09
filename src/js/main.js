@@ -1,3 +1,4 @@
+import "../css/main.css";
 import { elements } from "./_modules/_elements.js";
 import { header } from "./_modules/_header.js";
 import { aboutMe } from "./_modules/_aboutMe.js";

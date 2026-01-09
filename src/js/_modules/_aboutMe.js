@@ -1,3 +1,5 @@
+import fotoMike from "../../img/mikeOttenhoff.png";
+
 export const aboutMe = function () {
   const aboutMe = document.querySelector(".aboutMe");
 
@@ -7,7 +9,7 @@ export const aboutMe = function () {
 
   // photo
   const aboutMe_photo = document.createElement("img");
-  aboutMe_photo.src = "../../img/mikeOttenhoff.png";
+  aboutMe_photo.src = fotoMike;
   aboutMe_photo.alt = "Foto Mike Ottenhoff, audiovisueel vormgever";
 
   // text

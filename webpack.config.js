@@ -18,8 +18,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html", // your HTML template
-      title: "Weather App", // optional, overrides <title>
-      favicon: "./src/img/favicon_weatherApp.svg",
+      title: "Mike Ottenhoff, audiovisual vormgever", // optional, overrides <title>
+      favicon: "./src/img/mo_favicon.svg",
     }),
   ],
   output: {

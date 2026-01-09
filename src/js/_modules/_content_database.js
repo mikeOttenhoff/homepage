@@ -6,7 +6,7 @@ export const content_database = {
     img: "",
     link: "",
     github_link: "",
-    sort: ["grafisch vormgeven", "motion graphics"],
+    keyWords: ["grafisch vormgeven", "motion graphics"],
   },
   ding2: {
     title: "ding2",
@@ -15,6 +15,6 @@ export const content_database = {
     img: "",
     link: "",
     github_link: "",
-    sort: ["grafisch vormgeven"],
+    keyWords: ["grafisch vormgeven"],
   },
 };

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +27,7 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: "Funnel Sans", sans-serif;
+  font-family: "Arimo", sans-serif;
   font-weight: 300;
   font-size: 1.6rem;
 }
@@ -85,4 +85,45 @@ a {
 body {
   background-color: rgb(150, 150, 150);
   position: relative;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  background-color: rgb(2, 114, 94);
+  padding: 1rem;
+}
+.header_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.aboutMe {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutMe_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: rgb(200, 200, 200);
+}
+.aboutMe_container img {
+  width: 30rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.aboutMe_textContainer {
+  background-color: rgb(3, 63, 63);
+  align-self: end;
+  margin-bottom: 5rem;
+  padding: 1rem;
 }

@@ -4,3 +4,44 @@ body {
   background-color: $c1_3;
   position: relative;
 }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  background-color: $c5;
+  padding: 1rem;
+  &_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.aboutMe {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: $c1_2;
+    img {
+      width: 30rem;
+      object-fit: contain;
+    }
+  }
+  &_textContainer {
+    background-color: $c3;
+    align-self: end;
+    margin-bottom: 5rem;
+    padding: 1rem;
+  }
+}
