@@ -1,18 +1,25 @@
 @use "variables.scss" as *;
 
+$padding: 2rem;
+
 body {
   background-color: $c1_3;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
 
 .container {
-  width: 100vw;
+  width: 50vw;
   height: 100vh;
+  display: grid;
 }
 
 .header {
   background-color: $c5;
-  padding: 1rem;
+  padding: $padding;
+  align-self: start;
   &_menu {
     display: flex;
     justify-content: center;
@@ -22,7 +29,7 @@ body {
 }
 
 .aboutMe {
-  width: 100vw;
+  align-self: start;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +38,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
     background-color: $c1_2;
     img {
       width: 30rem;
@@ -42,6 +48,13 @@ body {
     background-color: $c3;
     align-self: end;
     margin-bottom: 5rem;
-    padding: 1rem;
+    padding: $padding;
   }
+}
+
+.footer {
+  // height: 10rem;
+  padding: $padding;
+  align-self: end;
+  background-color: $c4;
 }
