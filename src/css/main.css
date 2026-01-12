@@ -94,6 +94,7 @@ body {
   width: 50vw;
   height: 100vh;
   display: grid;
+  gap: 2rem;
 }
 
 .header {
@@ -130,6 +131,27 @@ body {
   align-self: end;
   margin-bottom: 5rem;
   padding: 2rem;
+}
+
+.content_container {
+  background-color: red;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.content {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.content img {
+  height: 50%;
+}
+.content h3 {
+  font-size: 3rem;
 }
 
 .footer {

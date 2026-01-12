@@ -14,6 +14,7 @@ body {
   width: 50vw;
   height: 100vh;
   display: grid;
+  gap: $padding;
 }
 
 .header {
@@ -49,6 +50,27 @@ body {
     align-self: end;
     margin-bottom: 5rem;
     padding: $padding;
+  }
+}
+
+.content_container {
+  background-color: red;
+  padding: $padding;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $padding;
+}
+
+.content {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
+  img {
+    height: 50%;
+  }
+  h3 {
+    font-size: 3rem;
   }
 }
 
