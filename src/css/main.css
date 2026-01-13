@@ -108,6 +108,9 @@ body {
   align-items: center;
   gap: 1rem;
 }
+.header_menu a {
+  cursor: pointer;
+}
 
 .aboutMe {
   align-self: start;
@@ -143,19 +146,48 @@ body {
 
 .content {
   background-color: aqua;
-  display: flex;
-  flex-direction: column;
   padding: 2rem;
+  display: grid;
+  justify-items: start;
+  place-content: start;
 }
 .content img {
-  height: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: greenyellow;
+  margin-bottom: 1rem;
 }
 .content h3 {
   font-size: 3rem;
+}
+.content .link_container {
+  background-color: orangered;
+  margin-top: 1rem;
+  justify-self: center;
+  align-self: end;
+  display: flex;
+  gap: 1rem;
+}
+.content .link_container a {
+  cursor: pointer;
 }
 
 .footer {
   padding: 2rem;
   align-self: end;
   background-color: rgb(2, 89, 80);
+}
+
+.fullscreen {
+  z-index: 100;
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(241, 242, 239);
+}
+.fullscreen img {
+  width: 20rem;
 }

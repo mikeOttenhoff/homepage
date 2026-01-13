@@ -10,12 +10,17 @@ export const content = function () {
     const link = document.createElement("a");
     link.href = href;
     link.textContent = text;
+    link.target = "_blank";
     container.append(link);
   }
 
   content.forEach(function ([key, item]) {
     const assignment_container = document.createElement("div");
     assignment_container.classList.add("content");
+
+    assignment_container.addEventListener("click", function () {
+      assignment_container.classList.toggle("fullscreen");
+    });
 
     const assignment_img_link = document.createElement("img");
     assignment_img_link.src = item.img;

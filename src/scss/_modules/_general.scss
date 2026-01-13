@@ -26,6 +26,9 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    a {
+      cursor: pointer;
+    }
   }
 }
 
@@ -63,14 +66,29 @@ body {
 
 .content {
   background-color: aqua;
-  display: flex;
-  flex-direction: column;
   padding: $padding;
+  display: grid;
+  justify-items: start;
+  // grid-template-rows: auto auto 1fr auto;
+  place-content: start;
   img {
-    height: 50%;
+    object-fit: contain;
+    background-color: greenyellow;
+    margin-bottom: 1rem;
   }
   h3 {
     font-size: 3rem;
+  }
+  .link_container {
+    background-color: orangered;
+    margin-top: 1rem;
+    justify-self: center;
+    align-self: end;
+    display: flex;
+    gap: 1rem;
+    a {
+      cursor: pointer;
+    }
   }
 }
 
@@ -79,4 +97,20 @@ body {
   padding: $padding;
   align-self: end;
   background-color: $c4;
+}
+
+.fullscreen {
+  z-index: 100;
+  position: fixed;
+  inset: 0;
+  // width: 100vw;
+  // height: 100vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  background-color: $alpha_bg;
+  color: $c1;
+  img {
+    width: 20rem;
+  }
 }
