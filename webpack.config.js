@@ -40,4 +40,10 @@ module.exports = {
       },
     ],
   },
+
+  resolve: {
+    alias: {
+      "@img": path.resolve(__dirname, "src/img"),
+    },
+  },
 };
