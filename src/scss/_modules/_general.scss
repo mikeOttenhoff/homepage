@@ -67,11 +67,10 @@ body {
 }
 
 .content {
-  background-color: aqua;
+  background-color: $c1;
   padding: $padding;
   display: grid;
   justify-items: start;
-  // grid-template-rows: auto auto 1fr auto;
   place-content: start;
   img {
     object-fit: contain;
@@ -79,13 +78,13 @@ body {
   }
   h3 {
     font-size: 3rem;
+    line-height: 3rem;
   }
   .link_container {
     background-color: orangered;
     margin-top: 1rem;
-    justify-self: center;
-    align-self: end;
     display: flex;
+    justify-self: center;
     gap: 1rem;
     a {
       cursor: pointer;

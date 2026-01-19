@@ -1,19 +1,17 @@
-import logo from "@img/Logo.svg";
-import img1 from "@img/ding1/_fotos/WP_20131126_22_25_45_Pro.jpg";
-import img2 from "@img/ding1/_fotos/WP_20131128_20_17_05_Pro.jpg";
-import img3 from "@img/ding1/_fotos/WP_20131221_17_04_46_Pro.jpg";
+import logo from "@img/goudenLotusAwards2025/gla_logo.svg";
+import img1 from "@img/goudenLotusAwards2025/nieuwsberichten_658x395_datagedrevenWerken.jpg";
+import img2 from "@img/goudenLotusAwards2025/gla_adv.jpg";
+import img3 from "@img/goudenLotusAwards2025/gla_doubleRectangle_600x500_banner.webp";
 
 export const content_database = {
   ding1: {
-    title: "Hello World!",
-    textContent:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam enim nec turpis tempor molestie. ",
+    title: "Gouden Lotus Award",
+    textContent: "Een nieuw logo ontwerp voor de Gouden Lotus Awards.",
     img: logo,
-
-    link: "https://developer.mozilla.org/en-US/",
-    link_name: "MDN",
-    github_link: "https://github.com/mikeOttenhoff/hello-world",
-    keyWords: ["HTML", "CSS", "JavaScript"],
+    link: "https://infinance.nl/gouden-lotus-awards/",
+    link_name: "Gouden Lotus Awards",
+    github_link: "",
+    keyWords: ["Ontwerp", "Illustrator", "Advertentie", "Banners"],
     // fullscreen
     fullscreen: {
       description:

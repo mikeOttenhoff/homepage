@@ -9,6 +9,7 @@ $arrow-size: 4rem;
   align-items: center;
   // justify-content: center;
   position: relative;
+  aspect-ratio: 16 / 9;
 }
 .arrow_left {
   left: 2rem;
@@ -23,6 +24,14 @@ $arrow-size: 4rem;
   width: $arrow-size;
   justify-self: flex-end;
   transform: scale(1);
+}
+
+.arrow_left,
+.arrow_right,
+.dot {
+  mix-blend-mode: difference;
+  background-color: white; // for dots
+  filter: none; // remove invert filter
 }
 
 .arrow_left,
@@ -53,7 +62,7 @@ $arrow-size: 4rem;
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     flex-shrink: 0;
   }
 }
