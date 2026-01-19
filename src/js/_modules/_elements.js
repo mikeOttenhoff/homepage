@@ -8,14 +8,17 @@ export const elements = function () {
   const header = document.createElement("header");
   header.classList.add("header");
 
+  const menuLogo = document.createElement("img");
+  menuLogo.classList.add("header_logo");
+
   const header_menu = document.createElement("nav");
   header_menu.classList.add("header_menu");
   header_menu.setAttribute("aria-label", "Main navigation");
 
+  header.append(menuLogo, header_menu);
+
   const aboutMe = document.createElement("div");
   aboutMe.classList.add("aboutMe");
-
-  header.append(header_menu);
 
   //content
   const article = document.createElement("article");

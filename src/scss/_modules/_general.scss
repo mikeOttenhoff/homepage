@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: clamp(40vw, 1200px, 80vw);
+  width: clamp(300px, 1200px, 80vw);
   height: 100vh;
   display: grid;
   gap: $padding;
@@ -21,13 +21,38 @@ body {
   background-color: $c5;
   padding: $padding;
   align-self: start;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   &_menu {
+    grid-column: 2/3;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     a {
       cursor: pointer;
+      text-align: center;
+    }
+    @media (max-width: 800px) {
+      grid-column: 1/-1;
+      flex-direction: column;
+      gap: 0.1rem;
+      a {
+        width: 100%;
+      }
+    }
+  }
+  &_logo {
+    grid-column: 1/2;
+    grid-row: 1;
+    width: 20%;
+    @media (max-width: 800px) {
+      width: 30%;
+      justify-self: center;
+      grid-column: 1/-1;
     }
   }
 }
@@ -57,7 +82,7 @@ body {
 }
 
 .content_container {
-  padding: $padding;
+  // padding: $padding;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $padding;
@@ -70,8 +95,11 @@ body {
   background-color: $c1;
   padding: $padding;
   display: grid;
-  justify-items: start;
+  // justify-items: start;
   place-content: start;
+  @media (max-width: 750px) {
+    place-content: center;
+  }
   img {
     object-fit: contain;
     margin-bottom: 1rem;
@@ -79,15 +107,25 @@ body {
   h3 {
     font-size: 3rem;
     line-height: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
   .link_container {
-    background-color: orangered;
     margin-top: 1rem;
     display: flex;
     justify-self: center;
+    align-items: center;
     gap: 1rem;
+    font-style: italic;
+    text-align: center;
+    line-height: 2rem;
+
     a {
+      font-size: 1.2rem;
+      line-height: 1.2;
       cursor: pointer;
+      color: blue;
+      border-bottom: 1px solid blue;
     }
   }
   &.fullscreen {
@@ -129,11 +167,13 @@ body {
     display: grid;
     place-items: center;
     gap: 1rem;
+    text-align: center;
     .keyword_list {
       display: flex;
       gap: 1rem;
       font-size: 1.4rem;
       font-weight: 700;
+      font-style: italic;
     }
     .carousel_container {
       width: clamp(60vh, 90vw, 30vw);

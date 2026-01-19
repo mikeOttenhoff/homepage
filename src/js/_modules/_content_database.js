@@ -15,7 +15,7 @@ export const content_database = {
     // fullscreen
     fullscreen: {
       description:
-        "This project explores the basics of HTML, CSS and JavaScript. The focus was on structure and accessibility.",
+        "Voor 'De Gouden Lotus Awards' is er een nieuw logo bedacht. Dit logo wordt gebruikt op o.a. de website, advertenties en nog veel meer. Hier een kleine greep van de content die voor dit project gemaakt zijn.",
       images: [
         {
           link: img1,

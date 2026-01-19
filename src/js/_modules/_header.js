@@ -1,5 +1,14 @@
+import logo from "@img/Logo.svg";
+
 export const header = function () {
+  const header = document.querySelector(".header");
+  const menuLogo = document.querySelector(".header_logo");
   const header_menu = document.querySelector(".header_menu");
+
+  menuLogo.src = logo;
+  menuLogo.alt = "Mike Ottenhoff, audiovisueel vormgever logo ";
+
+  header.append(menuLogo);
 
   const menuItems = [
     { name: "home", url: "/" },

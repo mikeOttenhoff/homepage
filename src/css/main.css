@@ -91,7 +91,7 @@ body {
 }
 
 .container {
-  width: clamp(40vw, 1200px, 80vw);
+  width: clamp(300px, 1200px, 80vw);
   height: 100vh;
   display: grid;
   gap: 2rem;
@@ -101,8 +101,14 @@ body {
   background-color: rgb(2, 114, 94);
   padding: 2rem;
   align-self: start;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 .header_menu {
+  grid-column: 2/3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +116,29 @@ body {
 }
 .header_menu a {
   cursor: pointer;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .header_menu {
+    grid-column: 1/-1;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .header_menu a {
+    width: 100%;
+  }
+}
+.header_logo {
+  grid-column: 1/2;
+  grid-row: 1;
+  width: 20%;
+}
+@media (max-width: 800px) {
+  .header_logo {
+    width: 30%;
+    justify-self: center;
+    grid-column: 1/-1;
+  }
 }
 
 .aboutMe {
@@ -138,7 +167,6 @@ body {
 }
 
 .content_container {
-  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -153,8 +181,12 @@ body {
   background-color: rgb(241, 242, 239);
   padding: 2rem;
   display: grid;
-  justify-items: start;
   place-content: start;
+}
+@media (max-width: 750px) {
+  .content {
+    place-content: center;
+  }
 }
 .content img {
   -o-object-fit: contain;
@@ -164,16 +196,25 @@ body {
 .content h3 {
   font-size: 3rem;
   line-height: 3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 .content .link_container {
-  background-color: orangered;
   margin-top: 1rem;
   display: flex;
   justify-self: center;
+  align-items: center;
   gap: 1rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 2rem;
 }
 .content .link_container a {
+  font-size: 1.2rem;
+  line-height: 1.2;
   cursor: pointer;
+  color: blue;
+  border-bottom: 1px solid blue;
 }
 .content.fullscreen .content_text {
   display: none;
@@ -211,12 +252,14 @@ body {
   display: grid;
   place-items: center;
   gap: 1rem;
+  text-align: center;
 }
 .fullscreen .extra_content .keyword_list {
   display: flex;
   gap: 1rem;
   font-size: 1.4rem;
   font-weight: 700;
+  font-style: italic;
 }
 .fullscreen .extra_content .carousel_container {
   width: clamp(60vh, 90vw, 30vw);
