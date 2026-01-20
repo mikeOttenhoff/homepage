@@ -3,9 +3,10 @@ import img1 from "@img/goudenLotusAwards2025/nieuwsberichten_658x395_datagedreve
 import img2 from "@img/goudenLotusAwards2025/gla_adv.jpg";
 import img3 from "@img/goudenLotusAwards2025/gla_doubleRectangle_600x500_banner.webp";
 import puffin from "@img/puffin.webm";
+import jungle from "@img/Tropical-Jungle-Background-Graphics-84339217-1.webp";
 
 export const content_database = {
-  ding1: {
+  gla: {
     title: "Gouden Lotus Award",
     textContent: "Een nieuw logo ontwerp voor de Gouden Lotus Awards.",
     img: logo,
@@ -33,7 +34,7 @@ export const content_database = {
       ],
     },
   },
-  ding2: {
+  papegaaiDuiker: {
     title: "Papegaai duiker",
     textContent:
       "Een animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
@@ -48,14 +49,14 @@ export const content_database = {
         "Een animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
     },
   },
-  ding3: {
-    title: "ding3",
+  lostCities_rekenApp: {
+    title: "Lost Cities, reken app",
     textContent:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam enim nec turpis tempor molestie. ",
-    img: "",
+      "Een reken app voor Lost Cities, een kaartspel voor twee spelers waar je op expeditie gaat en deze expeditie winstgevend moet maken. \n\n De reken app heb ik gemaakt omdat het berekenen van de punten irritant was.",
+    img: jungle,
     link: "",
     link_name: "",
-    github_link: "",
-    keyWords: ["grafisch vormgeven, design"],
+    github_link: "https://mikeottenhoff.github.io/lostCities_points/",
+    keyWords: ["HTML, SCSS, CSS, Javascript"],
   },
 };
