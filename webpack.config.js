@@ -35,7 +35,7 @@ module.exports = {
         use: ["style-loader", "css-loader"], // allow import './file.css'
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp|webm)$/i,
         type: "asset/resource", // copy images to dist
       },
     ],

@@ -87,11 +87,34 @@ export const content = function () {
       }
     });
 
-    const assignment_img_link = document.createElement("img");
-    assignment_img_link.src = item.img;
+    const imgFile = item.img;
+    if (imgFile) {
+      const extension = imgFile.split(".").pop().toLowerCase();
 
-    if (item.img) {
-      assignment_container.append(assignment_img_link);
+      let element;
+
+      // Video formats
+      const videoFormats = ["webm", "mp4", "ogg"];
+
+      // Image formats
+      const imageFormats = ["png", "jpg", "jpeg", "gif", "webp", "svg"];
+
+      if (videoFormats.includes(extension)) {
+        element = document.createElement("video");
+        element.src = imgFile;
+        element.autoplay = true;
+        element.loop = true;
+        element.muted = true; // required for autoplay
+        element.playsInline = true; // better mobile support
+        element.style.maxWidth = "100%"; // optional styling
+      } else if (imageFormats.includes(extension)) {
+        element = document.createElement("img");
+        element.src = imgFile;
+      } else {
+        console.warn("Unsupported file format:", imgFile);
+      }
+
+      if (element) assignment_container.append(element);
     }
 
     const assignment_title = document.createElement("h3");

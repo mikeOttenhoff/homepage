@@ -2,6 +2,7 @@ import logo from "@img/goudenLotusAwards2025/gla_logo.svg";
 import img1 from "@img/goudenLotusAwards2025/nieuwsberichten_658x395_datagedrevenWerken.jpg";
 import img2 from "@img/goudenLotusAwards2025/gla_adv.jpg";
 import img3 from "@img/goudenLotusAwards2025/gla_doubleRectangle_600x500_banner.webp";
+import puffin from "@img/puffin.webm";
 
 export const content_database = {
   ding1: {
@@ -33,19 +34,18 @@ export const content_database = {
     },
   },
   ding2: {
-    title: "Git test",
+    title: "Papegaai duiker",
     textContent:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam enim nec turpis tempor molestie. ",
-    img: "",
-    link: "https://stackoverflow.com/questions",
-    link_name: "Stack Overflow",
-    github_link: "https://github.com/mikeOttenhoff/git_test",
-    keyWords: ["Git"],
+      "Een animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
+    img: puffin,
+    link: "",
+    link_name: "",
+    github_link: "",
+    keyWords: ["After Effects, Joystick 'n sliders, animatie"],
     // fullscreen
     fullscreen: {
       description:
-        "A small test project focused on Git workflows and version control.",
-      tech: ["Git", "GitHub"],
+        "Een animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
     },
   },
   ding3: {
