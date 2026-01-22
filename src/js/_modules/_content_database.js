@@ -4,7 +4,8 @@ import img2 from "@img/goudenLotusAwards2025/gla_adv.jpg";
 import img3 from "@img/goudenLotusAwards2025/gla_doubleRectangle_600x500_banner.webp";
 import puffin from "@img/puffin.webm";
 import jungle from "@img/Tropical-Jungle-Background-Graphics-84339217-1.webp";
-import galileo from "@img/galileo.jpg";
+import scoutingPoster1 from "@img/scouting/scouting_MontgomeryPoster_v2.jpg";
+import scoutingPoster2 from "@img/scouting/scouting_WeCanDoItPoster_V2.jpg";
 
 // item.img = {
 //   type: "image" | "video" | "youtube" | "lottie",
@@ -31,17 +32,17 @@ export const content_database = {
         {
           type: "image",
           src: img1,
-          alt: "Photo 1",
+          alt: "algemeen logo, gouden lotus awards",
         },
         {
           type: "image",
           src: img2,
-          alt: "Photo 2",
+          alt: "Advertentie, gouden lotus awards",
         },
         {
           type: "image",
           src: img3,
-          alt: "Photo 3",
+          alt: "Online banner, gouden lotus awards",
         },
       ],
     },
@@ -83,7 +84,7 @@ export const content_database = {
     // fullscreen
     fullscreen: {
       description:
-        "Voor kennis en weetjes programma 'Galileo' heb ik 3 seizoenen diverse content gemaakt ",
+        "Voor kennis en weetjes programma 'Galileo' heb ik 3 seizoenen diverse Motion graphic content gemaakt.",
       media: [
         {
           type: "youtube",
@@ -96,6 +97,32 @@ export const content_database = {
         {
           type: "youtube",
           id: "aN5rLLGxgvc",
+        },
+      ],
+    },
+  },
+  scouting: {
+    title: "Scouting posters",
+    textContent: "Promo posters voor mijn scouting vereniging",
+    img: { type: "image", src: scoutingPoster1 },
+    link: "",
+    link_name: "",
+    github_link: "",
+    keyWords: ["Advertentie"],
+    // fullscreen
+    fullscreen: {
+      description:
+        "Promotie materiaal gebaseerd op bekende oude posters, aangepast als oproep materiaal voor mijn scouting groep.",
+      media: [
+        {
+          type: "image",
+          src: scoutingPoster1,
+          alt: "Montgomery poster voor scouting",
+        },
+        {
+          type: "image",
+          src: scoutingPoster2,
+          alt: "We can do it poster voor scouting",
         },
       ],
     },

@@ -98,6 +98,7 @@ export const content = function () {
         // 🖼 Image
         case "image":
           element = document.createElement("img");
+          element.classList.add("content_img");
           element.src = media.src;
           element.alt = media.alt || "";
           break;
@@ -116,7 +117,7 @@ export const content = function () {
         // ▶️ YouTube
         case "youtube":
           element = document.createElement("iframe");
-          element.src = `https://www.youtube.com/embed/${media.id}?autoplay=1&mute=1`;
+          element.src = `https://www.youtube.com/embed/${media.id}?autoplay=0&mute=1`;
           element.allow =
             "clipboard-write; encrypted-media; picture-in-picture";
           element.allowFullscreen = true;
