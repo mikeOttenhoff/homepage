@@ -1,10 +1,10 @@
-import { carousel_items } from "./_carousel_img.js";
+// import { carousel_items } from "./_carousel_img.js";
 import arrowleft from "@img/arrow_left.svg";
 import arrowRight from "@img/arrow_right.svg";
 
 export const ui_elements = function (
   container = document.body,
-  imagesData = []
+  mediaItems = [],
 ) {
   // const body = document.body;
 
@@ -34,20 +34,20 @@ export const ui_elements = function (
   const dots_container = document.createElement("div");
   dots_container.classList.add("dots_container");
 
-  // Images made from carousel_img list
-  const images = imagesData.map(function (e) {
-    const image = document.createElement("img");
-    image.src = e.link;
-    image.alt = e.alt || "";
-    // image_container.append(image);
-    return image;
-  });
+  // // Images made from carousel_img list
+  // const images = imagesData.map(function (e) {
+  //   const image = document.createElement("img");
+  //   image.src = e.link;
+  //   image.alt = e.alt || "";
+  //   // image_container.append(image);
+  //   return image;
+  // });
 
   carousel_body.append(
     arrow_left_body,
     arrow_right_body,
     image_container,
-    dots_container
+    dots_container,
   );
   container.append(carousel_body);
 
@@ -55,7 +55,7 @@ export const ui_elements = function (
     arrow_left_body,
     arrow_right_body,
     image_container,
-    images,
+    mediaItems,
     dots_container,
   };
 };

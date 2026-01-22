@@ -2,7 +2,7 @@ import { content_database } from "./_content_database.js";
 import { ui_elements, export_carousel } from "./_components/carousel/main.js";
 
 export const content = function () {
-  const content = Object.entries(content_database);
+  const contentEntries = Object.entries(content_database);
   const content_container = document.querySelector(".content_container");
 
   function appendLink(container, href, text) {
@@ -39,10 +39,15 @@ export const content = function () {
       container.append(keyWordList);
     }
 
-    if (
-      Array.isArray(item.fullscreen?.images) &&
-      item.fullscreen?.images?.length
-    ) {
+    const mediaItems =
+      item.fullscreen?.media ??
+      item.fullscreen?.images?.map(img => ({
+        type: "image",
+        src: img.link,
+        alt: img.alt,
+      }));
+
+    if (Array.isArray(mediaItems) && mediaItems.length) {
       const carouselContainer = document.createElement("div");
       carouselContainer.classList.add("carousel_container");
 
@@ -51,17 +56,14 @@ export const content = function () {
       container.append(carouselContainer);
 
       // Initialize carousel inside this container
-      const carouselElements = ui_elements(
-        carouselContainer,
-        item.fullscreen.images
-      );
+      const carouselElements = ui_elements(carouselContainer, mediaItems);
 
       export_carousel(
         carouselElements.arrow_left_body,
         carouselElements.arrow_right_body,
         carouselElements.image_container,
-        carouselElements.images,
-        carouselElements.dots_container
+        carouselElements.mediaItems,
+        carouselElements.dots_container,
       );
     }
 
@@ -69,7 +71,7 @@ export const content = function () {
     return container;
   }
 
-  content.forEach(function ([key, item]) {
+  contentEntries.forEach(function ([key, item]) {
     const assignment_container = document.createElement("div");
     assignment_container.classList.add("content");
 
@@ -77,6 +79,7 @@ export const content = function () {
       if (e.target.closest(".carousel_container")) return;
 
       assignment_container.classList.toggle("fullscreen");
+
       let extra = assignment_container.querySelector(".extra_content");
       if (assignment_container.classList.contains("fullscreen")) {
         if (!extra) {
@@ -87,34 +90,61 @@ export const content = function () {
       }
     });
 
-    const imgFile = item.img;
-    if (imgFile) {
-      const extension = imgFile.split(".").pop().toLowerCase();
-
+    const media = item.img;
+    if (media) {
       let element;
 
-      // Video formats
-      const videoFormats = ["webm", "mp4", "ogg"];
+      switch (media.type) {
+        // 🖼 Image
+        case "image":
+          element = document.createElement("img");
+          element.src = media.src;
+          element.alt = media.alt || "";
+          break;
 
-      // Image formats
-      const imageFormats = ["png", "jpg", "jpeg", "gif", "webp", "svg"];
+        // 🎥 Local video
+        case "video":
+          element = document.createElement("video");
+          element.src = media.src;
+          element.autoplay = true;
+          element.loop = true;
+          element.muted = true;
+          element.playsInline = true;
+          element.style.maxWidth = "100%";
+          break;
 
-      if (videoFormats.includes(extension)) {
-        element = document.createElement("video");
-        element.src = imgFile;
-        element.autoplay = true;
-        element.loop = true;
-        element.muted = true; // required for autoplay
-        element.playsInline = true; // better mobile support
-        element.style.maxWidth = "100%"; // optional styling
-      } else if (imageFormats.includes(extension)) {
-        element = document.createElement("img");
-        element.src = imgFile;
-      } else {
-        console.warn("Unsupported file format:", imgFile);
+        // ▶️ YouTube
+        case "youtube":
+          element = document.createElement("iframe");
+          element.src = `https://www.youtube.com/embed/${media.id}?autoplay=1&mute=1`;
+          element.allow =
+            "clipboard-write; encrypted-media; picture-in-picture";
+          element.allowFullscreen = true;
+          element.style.width = "100%";
+          element.style.aspectRatio = "16 / 9";
+          break;
+
+        // ✨ Bodymovin / Lottie
+        case "lottie":
+          element = document.createElement("div");
+          element.classList.add("lottie");
+
+          lottie.loadAnimation({
+            container: element,
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            path: media.json,
+          });
+          break;
+
+        default:
+          console.warn("Unsupported media type:", media);
       }
 
-      if (element) assignment_container.append(element);
+      if (element) {
+        assignment_container.append(element);
+      }
     }
 
     const assignment_title = document.createElement("h3");
@@ -135,10 +165,11 @@ export const content = function () {
     appendLink(assignment_linkContainer, item.link, item.link_name);
     appendLink(assignment_linkContainer, item.github_link, "GitHub");
 
+    //append everything
     assignment_container.append(
       assignment_title,
       assignment_textContent,
-      assignment_linkContainer
+      assignment_linkContainer,
     );
 
     content_container.append(assignment_container);
