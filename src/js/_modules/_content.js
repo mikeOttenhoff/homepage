@@ -1,3 +1,4 @@
+import lottie from "lottie-web";
 import { content_database } from "./_content_database.js";
 import { ui_elements, export_carousel } from "./_components/carousel/main.js";
 
@@ -130,13 +131,31 @@ export const content = function () {
           element = document.createElement("div");
           element.classList.add("lottie");
 
+          const lottiePath = media.json || media.path;
+          if (!lottiePath) {
+            console.warn("Lottie item missing json:", media);
+            break;
+          }
+
           lottie.loadAnimation({
             container: element,
             renderer: "svg",
             loop: true,
             autoplay: true,
-            path: media.json,
+            path: lottiePath,
           });
+          break;
+
+        // Bodymovin Index.html
+        case "html":
+          element = document.createElement("iframe");
+          element.src = media.src;
+          element.loading = "lazy";
+          element.style.border = "0";
+          element.style.width = "100%";
+          element.style.height = "auto";
+          element.style.pointerEvents = "auto";
+          element.setAttribute("scrolling", "no");
           break;
 
         default:

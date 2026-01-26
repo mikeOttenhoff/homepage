@@ -6,7 +6,10 @@ module.exports = {
   entry: "./src/js/main.js",
   devtool: "inline-source-map",
   devServer: {
-    static: false, // don't serve 'dist', use in-memory bundle
+    static: [
+      path.join(__dirname, "dist"), // default bundle
+      path.join(__dirname, "public"), // static assets
+    ], // don't serve 'dist', use in-memory bundle
     watchFiles: ["src/**/*"], // watch all source files
     devMiddleware: {
       writeToDisk: true, // forces dev server to write files to disk
@@ -37,6 +40,11 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp|webm)$/i,
         type: "asset/resource", // copy images to dist
+      },
+      {
+        test: /\.html$/,
+        exclude: path.resolve(__dirname, "src/index.html"),
+        type: "asset/resource",
       },
     ],
   },

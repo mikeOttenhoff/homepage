@@ -6,6 +6,7 @@ import puffin from "@img/puffin.webm";
 import jungle from "@img/Tropical-Jungle-Background-Graphics-84339217-1.webp";
 import scoutingPoster1 from "@img/scouting/scouting_MontgomeryPoster_v2.jpg";
 import scoutingPoster2 from "@img/scouting/scouting_WeCanDoItPoster_V2.jpg";
+import canva from "@img/canva_magicWrite_300x250/index.html";
 
 // item.img = {
 //   type: "image" | "video" | "youtube" | "lottie",
@@ -50,7 +51,7 @@ export const content_database = {
   papegaaiDuiker: {
     title: "Papegaai duiker",
     textContent:
-      "Een animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
+      "Het karakter gemaakt met Illustrator en de animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
     img: { type: "video", src: puffin },
     link: "",
     link_name: "",
@@ -66,11 +67,11 @@ export const content_database = {
   lostCities_rekenApp: {
     title: "Lost Cities, reken app",
     textContent:
-      "Een reken app voor Lost Cities, een kaartspel voor twee spelers waar je op expeditie gaat en deze expeditie winstgevend moet maken. \n\n De reken app heb ik gemaakt omdat het berekenen van de punten irritant was.",
+      "Een reken app voor Lost Cities, een kaartspel voor twee spelers waar je op expeditie gaat en deze expeditie winstgevend moet maken.",
     img: { type: "image", src: jungle },
-    link: "",
-    link_name: "",
-    github_link: "https://mikeottenhoff.github.io/lostCities_points/",
+    link: "https://mikeottenhoff.github.io/lostCities_points/",
+    link_name: "Lost cities, punten teller",
+    github_link: "https://github.com/mikeOttenhoff/lostCities_points",
     keyWords: ["HTML, SCSS, CSS, Javascript"],
   },
   galileo: {
@@ -126,5 +127,28 @@ export const content_database = {
         },
       ],
     },
+  },
+  canva: {
+    title: "Canva, proef opdracht",
+    textContent:
+      "Een test opdracht voor Canva. Gemaakt naar Canva's styleguide en extra voorwaarden",
+    img: { type: "html", src: canva },
+    link: "",
+    link_name: "",
+    github_link: "",
+    keyWords: ["After Effects, Lottie, Bodymovin"],
+  },
+  hypovak2021: {
+    title: "Banner, hypovak 2021",
+    textContent:
+      "Voor HypoVak 2021 een gemaakte banner met een man die vanalles in zijn leven probeert hoog te houden",
+    img: {
+      type: "lottie",
+      json: "./hypovak2021/banner_website_336x280.json",
+    },
+    link: "",
+    link_name: "",
+    github_link: "",
+    keyWords: ["After Effects, Lottie, Bodymovin"],
   },
 };

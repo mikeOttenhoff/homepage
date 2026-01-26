@@ -139,6 +139,11 @@ body {
       display: none;
     }
   }
+  .lottie,
+  iframe {
+    width: 100%;
+    min-height: 300px; /* your banner’s height */
+  }
 }
 
 .footer {
