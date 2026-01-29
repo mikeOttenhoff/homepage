@@ -133,6 +133,7 @@ export const content_database = {
     textContent:
       "Een test opdracht voor Canva. Gemaakt naar Canva's styleguide en extra voorwaarden",
     img: { type: "html", src: canva },
+    className: "canvaOpdracht",
     link: "",
     link_name: "",
     github_link: "",

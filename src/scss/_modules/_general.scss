@@ -95,7 +95,7 @@ body {
   display: grid;
   justify-items: center;
   place-content: start;
-  max-height: 500px;
+  position: relative;
   @media (max-width: 750px) {
     place-content: center;
   }
@@ -124,7 +124,7 @@ body {
     line-height: 2rem;
 
     a {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       line-height: 1.2;
       cursor: pointer;
       color: blue;
@@ -139,11 +139,15 @@ body {
       display: none;
     }
   }
-  .lottie,
+}
+
+//Losse iframe aandacht voor element dat steeds blijft inklappen
+.canvaOpdracht {
   iframe {
-    display: flex;
+    position: relative;
+    display: inline-flex;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 6/5;
     flex-direction: column;
   }
 }
@@ -178,6 +182,9 @@ body {
     place-items: center;
     gap: 1rem;
     text-align: center;
+    p {
+      max-width: clamp(60%, 800px, 60vw);
+    }
     .keyword_list {
       display: flex;
       gap: 1rem;

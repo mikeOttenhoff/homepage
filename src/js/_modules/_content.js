@@ -155,7 +155,7 @@ export const content = function () {
           element.loading = "lazy";
           element.style.border = "0";
           element.style.width = "100%";
-          element.style.minHeight = "auto";
+          element.style.height = "100%";
           element.style.pointerEvents = "auto";
           element.setAttribute("scrolling", "no");
           break;
@@ -167,6 +167,10 @@ export const content = function () {
       if (element) {
         assignment_container.append(element);
       }
+    }
+
+    if (item.className) {
+      assignment_container.classList.add(item.className);
     }
 
     const assignment_title = document.createElement("h3");
