@@ -113,6 +113,8 @@ export const content = function () {
           element.muted = true;
           element.playsInline = true;
           element.style.maxWidth = "100%";
+          element.style.aspectRatio = "16:9";
+          element.style.border = "0";
           break;
 
         // ▶️ YouTube
@@ -153,7 +155,7 @@ export const content = function () {
           element.loading = "lazy";
           element.style.border = "0";
           element.style.width = "100%";
-          element.style.height = "auto";
+          element.style.minHeight = "auto";
           element.style.pointerEvents = "auto";
           element.setAttribute("scrolling", "no");
           break;
