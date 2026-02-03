@@ -126,6 +126,7 @@ export const content = function () {
           element.allowFullscreen = true;
           element.style.width = "100%";
           element.style.aspectRatio = "16 / 9";
+          element.style.border = "none";
           break;
 
         // ✨ Bodymovin / Lottie

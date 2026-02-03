@@ -129,7 +129,7 @@ export const content_database = {
     },
   },
   canva: {
-    title: "Canva, proef opdracht",
+    title: "Canva",
     textContent:
       "Een test opdracht voor Canva. Gemaakt naar Canva's styleguide en extra voorwaarden",
     img: { type: "html", src: canva },
@@ -140,9 +140,9 @@ export const content_database = {
     keyWords: ["After Effects, Lottie, Bodymovin"],
   },
   hypovak2021: {
-    title: "Banner, hypovak 2021",
+    title: "Hypovak 2021",
     textContent:
-      "Voor HypoVak 2021 een gemaakte banner met een man die vanalles in zijn leven probeert hoog te houden",
+      "Voor HypoVak 2021 een gemaakte banner met een man die van alles in zijn leven probeert hoog te houden",
     img: {
       type: "lottie",
       json: "./hypovak2021/banner_website_336x280.json",
@@ -151,5 +151,19 @@ export const content_database = {
     link_name: "",
     github_link: "",
     keyWords: ["After Effects, Lottie, Bodymovin"],
+  },
+  bf2020: {
+    title: "BeleggersFair 2020",
+    textContent: "Een promotie voor deBeleggersFair 2020",
+    img: { type: "youtube", id: "6u2cH7ktUP4" },
+    link: "",
+    link_name: "",
+    github_link: "",
+    keyWords: ["Ontwerp", "Motion graphics", "Graphics", "Editing"],
+    // fullscreen
+    fullscreen: {
+      description: "",
+      media: [],
+    },
   },
 };
