@@ -1,9 +1,9 @@
 @use "variables.scss" as *;
 
-$padding: 2rem;
+$padding: clamp(1rem, 2rem, 2vw);
 
 body {
-  background-color: $c1_3;
+  background-color: $wit;
   position: relative;
   display: flex;
   justify-content: center;
@@ -11,14 +11,14 @@ body {
 }
 
 .container {
-  width: clamp(300px, 1200px, 80vw);
+  width: clamp(200px, 90vw, 1200px);
   height: 100vh;
   display: grid;
   gap: $padding;
 }
 
 .header {
-  background-color: $c5;
+  background-color: $kleur-secondair;
   padding: $padding;
   align-self: start;
   display: grid;
@@ -60,7 +60,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $c1_2;
+  background-color: $wit_1;
   &_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -73,28 +73,30 @@ body {
     }
   }
   &_textContainer {
-    background-color: $c3;
+    background-color: $kleur-primair;
     align-self: end;
     padding: $padding;
   }
 }
 
 .content_container {
-  // padding: $padding;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $padding;
+  justify-content: center;
   @media (max-width: 900px) {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
 
 .content {
-  background-color: $c1;
+  background-color: $kleur-secondair;
   padding: $padding;
   display: grid;
+
   justify-items: center;
-  place-content: start;
+  align-content: start;
+  // place-content: start;
   position: relative;
   @media (max-width: 750px) {
     place-content: center;
@@ -112,6 +114,9 @@ body {
   }
   .content_text {
     white-space: pre-line;
+  }
+  iframe {
+    width: 100%;
   }
   .link_container {
     margin-top: 1rem;
@@ -147,7 +152,7 @@ body {
     position: relative;
     display: inline-flex;
     width: 100%;
-    aspect-ratio: 6/5;
+    aspect-ratio: 6/5; //Deze is specifiek voor het onderwerp
     flex-direction: column;
   }
 }
@@ -156,7 +161,7 @@ body {
   // height: 10rem;
   padding: $padding;
   align-self: end;
-  background-color: $c4;
+  background-color: $wit_3;
 }
 
 .fullscreen {

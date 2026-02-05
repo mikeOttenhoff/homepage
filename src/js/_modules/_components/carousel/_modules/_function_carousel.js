@@ -12,7 +12,7 @@ export const export_carousel = function (
   //first setup
   let currentIndex = 0;
   const lastIndex = mediaItems.length - 1;
-  let autoSlideInterval;
+  // let autoSlideInterval;
 
   function renderMedia(media) {
     let element;
@@ -100,24 +100,24 @@ export const export_carousel = function (
   //Arrow next
   arrow_right_body.addEventListener("click", function () {
     nextImage();
-    resetAutoSlide();
+    // resetAutoSlide();
   });
 
   //Arrow previous
   arrow_left_body.addEventListener("click", function () {
     previousImage();
-    resetAutoSlide();
+    // resetAutoSlide();
   });
 
   //Auto run
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(nextImage, 5000);
-  }
+  // function startAutoSlide() {
+  //   autoSlideInterval = setInterval(nextImage, 5000);
+  // }
 
-  function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
-  }
+  // function resetAutoSlide() {
+  //   clearInterval(autoSlideInterval);
+  //   startAutoSlide();
+  // }
 
   // Start auto slide on load
   // startAutoSlide();

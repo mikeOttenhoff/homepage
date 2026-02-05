@@ -14,3 +14,21 @@ $gradient-bg: linear-gradient(
   rgba(0, 0, 0, 0.9),
   rgba(0, 0, 0, 0.6)
 );
+
+$kleur-primair: #ee3124;
+$kleur-primair-licht: #fc4e41;
+$kleur-primair-donker: #dc271a;
+
+$kleur-secondair: #96bf3d;
+$kleur-secondair-licht: #aed659;
+$kleur-secondair-donker: #7a9e2e;
+
+$zwart: #000;
+$zwart-alpha: rgba(0, 0, 0, 0.3);
+
+$wit: #fff;
+$wit_1: rgba(220, 220, 220, 1);
+$wit_2: rgba(200, 200, 200, 1);
+$wit_3: rgba(150, 150, 150, 1);
+
+$schaduw-groen: 1rem 1rem 0rem var(--kleur-secondair);

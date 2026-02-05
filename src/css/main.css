@@ -83,7 +83,7 @@ a {
 }
 
 body {
-  background-color: rgb(150, 150, 150);
+  background-color: #fff;
   position: relative;
   display: flex;
   justify-content: center;
@@ -91,15 +91,15 @@ body {
 }
 
 .container {
-  width: clamp(300px, 1200px, 80vw);
+  width: clamp(200px, 90vw, 1200px);
   height: 100vh;
   display: grid;
-  gap: 2rem;
+  gap: clamp(1rem, 2rem, 2vw);
 }
 
 .header {
-  background-color: rgb(2, 114, 94);
-  padding: 2rem;
+  background-color: #96bf3d;
+  padding: clamp(1rem, 2rem, 2vw);
   align-self: start;
   display: grid;
   grid-template-columns: 1fr;
@@ -144,7 +144,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(220, 220, 220);
 }
 .aboutMe_container {
   display: grid;
@@ -159,15 +159,16 @@ body {
   justify-self: end;
 }
 .aboutMe_textContainer {
-  background-color: rgb(3, 63, 63);
+  background-color: #ee3124;
   align-self: end;
-  padding: 2rem;
+  padding: clamp(1rem, 2rem, 2vw);
 }
 
 .content_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: clamp(1rem, 2rem, 2vw);
+  justify-content: center;
 }
 @media (max-width: 900px) {
   .content_container {
@@ -176,11 +177,11 @@ body {
 }
 
 .content {
-  background-color: rgb(241, 242, 239);
-  padding: 2rem;
+  background-color: #96bf3d;
+  padding: clamp(1rem, 2rem, 2vw);
   display: grid;
   justify-items: center;
-  place-content: start;
+  align-content: start;
   position: relative;
 }
 @media (max-width: 750px) {
@@ -202,6 +203,9 @@ body {
 }
 .content .content_text {
   white-space: pre-line;
+}
+.content iframe {
+  width: 100%;
 }
 .content .link_container {
   margin-top: 1rem;
@@ -236,9 +240,9 @@ body {
 }
 
 .footer {
-  padding: 2rem;
+  padding: clamp(1rem, 2rem, 2vw);
   align-self: end;
-  background-color: rgb(2, 89, 80);
+  background-color: rgb(150, 150, 150);
 }
 
 .fullscreen {
