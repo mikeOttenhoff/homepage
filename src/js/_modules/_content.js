@@ -94,7 +94,6 @@ export const content = function () {
     const media = item.img;
     if (media) {
       let element;
-
       switch (media.type) {
         // 🖼 Image
         case "image":
@@ -108,6 +107,7 @@ export const content = function () {
         case "video":
           element = document.createElement("video");
           element.src = media.src;
+          element.classList.add("content_video");
           element.autoplay = true;
           element.loop = true;
           element.muted = true;
@@ -127,6 +127,7 @@ export const content = function () {
           element.style.width = "100%";
           element.style.aspectRatio = "16 / 9";
           element.style.border = "none";
+          element.classList.add("content_youtube");
           break;
 
         // ✨ Bodymovin / Lottie
@@ -193,11 +194,11 @@ export const content = function () {
     appendLink(assignment_linkContainer, item.github_link, "GitHub");
 
     //append everything
-    assignment_container.append(
-      assignment_title,
-      assignment_textContent,
-      assignment_linkContainer,
-    );
+    assignment_container.append(assignment_title, assignment_textContent);
+
+    if (assignment_linkContainer.childElementCount > 0) {
+      assignment_container.append(assignment_linkContainer);
+    }
 
     content_container.append(assignment_container);
     // console.log(key, item);

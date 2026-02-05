@@ -21,8 +21,8 @@ export const content_database = {
     title: "Gouden Lotus Award",
     textContent: "Een nieuw logo ontwerp voor de Gouden Lotus Awards.",
     img: { type: "image", src: logo },
-    link: "https://infinance.nl/gouden-lotus-awards/",
-    link_name: "Gouden Lotus Awards",
+    link: "",
+    link_name: "",
     github_link: "",
     keyWords: ["Ontwerp", "Illustrator", "Advertentie", "Banners"],
     // fullscreen
@@ -51,7 +51,7 @@ export const content_database = {
   papegaaiDuiker: {
     title: "Papegaai duiker",
     textContent:
-      "Het karakter gemaakt met Illustrator en de animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
+      "Een animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
     img: { type: "video", src: puffin },
     link: "",
     link_name: "",
@@ -60,8 +60,13 @@ export const content_database = {
     // fullscreen
     fullscreen: {
       description:
-        "Een animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
-      media: [],
+        "Het karakter is gemaakt met Illustrator en de animatie gemaakt met After Effects en de plugin Joystick 'n Sliders. ",
+      media: [
+        {
+          type: "video",
+          src: puffin,
+        },
+      ],
     },
   },
   lostCities_rekenApp: {
@@ -76,7 +81,8 @@ export const content_database = {
   },
   galileo: {
     title: "Galileo",
-    textContent: "De 'Motion' Graphics voor 3 seizoenen Galileo",
+    textContent:
+      "De (Motion) Graphics voor 3 seizoenen Galileo samengevat in 3 complilaties",
     img: { type: "youtube", id: "gRAPgTZhdJE" },
     link: "",
     link_name: "",
@@ -85,7 +91,7 @@ export const content_database = {
     // fullscreen
     fullscreen: {
       description:
-        "Voor kennis en weetjes programma 'Galileo' heb ik 3 seizoenen diverse Motion graphic content gemaakt.",
+        "Bij kennis en weetjes programma 'Galileo' heb ik 3 seizoenen diverse Motion graphic content gemaakt.",
       media: [
         {
           type: "youtube",
@@ -98,6 +104,114 @@ export const content_database = {
         {
           type: "youtube",
           id: "aN5rLLGxgvc",
+        },
+      ],
+    },
+  },
+  canva: {
+    title: "Canva",
+    textContent:
+      "Een test opdracht voor Canva. Gemaakt naar Canva's styleguide en extra voorwaarden",
+    img: { type: "html", src: canva },
+    className: "canvaOpdracht",
+    link: "",
+    link_name: "",
+    github_link: "",
+    keyWords: ["After Effects, Lottie, Bodymovin"],
+  },
+  hypovak2021: {
+    title: "Hypovak 2021, Online banner",
+    textContent:
+      "Een online banner voor HypoVak 2021 met een man die van alles in zijn leven probeert hoog te houden",
+    img: {
+      type: "lottie",
+      json: "./hypovak2021/banner_website_336x280.json",
+    },
+    link: "",
+    link_name: "",
+    github_link: "",
+    keyWords: ["After Effects, Lottie, Bodymovin"],
+  },
+  beleggersFair: {
+    title: "BeleggersFair, video promo's",
+    textContent:
+      "Een verzameling promotie videos voor de BeleggersFair, een beleggers evenement.",
+    img: { type: "youtube", id: "6u2cH7ktUP4" },
+    link: "",
+    link_name: "",
+    github_link: "",
+    keyWords: ["Ontwerp", "Motion graphics", "Graphics", "Editing"],
+    // fullscreen
+    fullscreen: {
+      description: "",
+      media: [
+        {
+          type: "youtube",
+          id: "RSYx7LD531c",
+        },
+        {
+          type: "youtube",
+          id: "q8bf5AuNylc",
+        },
+        {
+          type: "youtube",
+          id: "6u2cH7ktUP4",
+        },
+        {
+          type: "youtube",
+          id: "gKu70PIdM0A",
+        },
+        {
+          type: "youtube",
+          id: "qZaGQKuovzU",
+        },
+        {
+          type: "youtube",
+          id: "GQfnDpuveC8",
+        },
+        {
+          type: "youtube",
+          id: "DmgDPHxGNoU",
+        },
+      ],
+    },
+  },
+  hypovak: {
+    title: "HypoVak, video promo's",
+    textContent:
+      "Een verzameling promotie videos voor hypotheek evenement HypoVak.",
+    img: { type: "youtube", id: "LVA4AuT985k" },
+    link: "",
+    link_name: "",
+    github_link: "",
+    keyWords: ["Ontwerp", "Motion graphics", "Graphics", "Editing"],
+    // fullscreen
+    fullscreen: {
+      description: "",
+      media: [
+        {
+          type: "youtube",
+          id: "LVA4AuT985k",
+        },
+        {
+          type: "youtube",
+          id: "0B1e7-CYzoU",
+        },
+        {
+          type: "youtube",
+          id: "2i819cscPTM",
+        },
+        {
+          type: "youtube",
+          id: "ytjYBjze0LI",
+        },
+        {
+          type: "youtube",
+          id: "LxcTGyNvit0",
+        },
+        {
+          type: "youtube",
+          id: "EzxUY2TcbMw",
         },
       ],
     },
@@ -126,44 +240,6 @@ export const content_database = {
           alt: "We can do it poster voor scouting",
         },
       ],
-    },
-  },
-  canva: {
-    title: "Canva",
-    textContent:
-      "Een test opdracht voor Canva. Gemaakt naar Canva's styleguide en extra voorwaarden",
-    img: { type: "html", src: canva },
-    className: "canvaOpdracht",
-    link: "",
-    link_name: "",
-    github_link: "",
-    keyWords: ["After Effects, Lottie, Bodymovin"],
-  },
-  hypovak2021: {
-    title: "Hypovak 2021",
-    textContent:
-      "Voor HypoVak 2021 een gemaakte banner met een man die van alles in zijn leven probeert hoog te houden",
-    img: {
-      type: "lottie",
-      json: "./hypovak2021/banner_website_336x280.json",
-    },
-    link: "",
-    link_name: "",
-    github_link: "",
-    keyWords: ["After Effects, Lottie, Bodymovin"],
-  },
-  bf2020: {
-    title: "BeleggersFair 2020",
-    textContent: "Een promotie voor deBeleggersFair 2020",
-    img: { type: "youtube", id: "6u2cH7ktUP4" },
-    link: "",
-    link_name: "",
-    github_link: "",
-    keyWords: ["Ontwerp", "Motion graphics", "Graphics", "Editing"],
-    // fullscreen
-    fullscreen: {
-      description: "",
-      media: [],
     },
   },
 };
