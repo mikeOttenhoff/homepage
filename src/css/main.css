@@ -226,10 +226,9 @@ body {
 }
 .content .link_container {
   justify-self: center;
+  width: 100%;
   display: grid;
   grid-template-columns: auto-fill, minmax(200px, 1fr);
-  justify-content: start;
-  align-content: start;
   gap: 1rem;
   font-style: italic;
   text-align: center;
