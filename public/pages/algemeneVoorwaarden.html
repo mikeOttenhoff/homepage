@@ -5,17 +5,25 @@
     <title>Mike Ottenhoff: multimedia vormgever</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
     <link rel="stylesheet" href="/css/main.css">
+    <title>
+        <%= htmlWebpackPlugin.options.title || 'Page' %>
+    </title>
 </head>
 
 <body id="top" class="algemeneVoorwaarden">
     <header class="header_av">
         <a href="/" class="header_logo">
-            <img src="../img/Logo.svg" alt="Mike Ottenhoff, multimedia vormgever. Logo" class="header_logo_img">
+            <img src="../img/beeldmerk-1000px.svg" alt="Mike Ottenhoff, multimedia vormgever. Logo"
+                class="header_logo_img">
         </a>
+
+        <nav>
+            <ul>
+                <li><a href="./pages/algemeneVoorwaarden.html">Algemene Voorwaarden</a></li>
+            </ul>
+        </nav>
     </header>
-
     <a href="#top" class="backToTop">top</a>
-
     <article class="algemeneVoorwaarden_text">
         <h2>ALGEMENE VOORWAARDEN</h2>
         <p>
@@ -323,8 +331,9 @@
         </div>
     </article>
     <footer class="footer">
-        <a href="/" class="footer_titel">Mike Ottenhoff, multimedia vormgever</a>
+        <p class="footer_titel">Mike Ottenhoff, multimedia vormgever</p>
     </footer>
+    <!-- <%= htmlWebpackPlugin.tags.bodyTags %> -->
 </body>
 
 </html>

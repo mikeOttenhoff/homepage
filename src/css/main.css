@@ -304,6 +304,79 @@ body {
   padding: clamp(1rem, 2rem, 2vw);
   align-self: end;
   background-color: rgb(150, 150, 150);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+}
+.footer_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2rem, 2vw);
+  cursor: pointer;
+  font-size: clamp(1rem, 2rem, 2vw);
+  font-weight: 800;
+  margin-bottom: clamp(1rem, 2rem, 2vw);
+  transition: all 300ms ease-in-out;
+}
+.footer_menu a {
+  transform: scale(1);
+  transition: all 300ms ease-out;
+}
+.footer_menu a:hover {
+  transform: scale(1.1);
+}
+
+/*---Algemene voorwaarden---*/
+.algemeneVoorwaarden {
+  flex-direction: column;
+}
+.algemeneVoorwaarden .header_av {
+  background-color: #aed659;
+  padding: clamp(1rem, 2rem, 2vw);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.algemeneVoorwaarden .header_av .header_logo {
+  margin: 0 auto;
+  cursor: pointer;
+}
+.algemeneVoorwaarden .footer {
+  width: 100%;
+  margin: 0 auto;
+}
+.algemeneVoorwaarden_text {
+  padding: 5rem 10rem;
+  margin: 0 auto;
+  max-width: 100rem;
+}
+.algemeneVoorwaarden_text div {
+  margin: 2rem auto;
+}
+.algemeneVoorwaarden_text div p {
+  margin-bottom: 1rem;
+}
+.algemeneVoorwaarden_text div p span {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #96bf3d;
+  padding: 2rem;
+  border-radius: 100rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 .carousel_body {

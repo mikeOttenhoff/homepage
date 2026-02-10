@@ -11,10 +11,9 @@ export const header = function () {
   header.append(menuLogo);
 
   const menuItems = [
-    { name: "home", url: "/" },
     {
-      name: "algemene voorwaarden",
-      url: "../../pages/algemeneVoorwaarden.html",
+      name: "Neem contact op",
+      url: "mailto:mikeottenhoff@outlook.com",
     },
     {
       name: "github",
