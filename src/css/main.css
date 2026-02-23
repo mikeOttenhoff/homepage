@@ -201,6 +201,7 @@ body {
   align-content: start;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 @media (max-width: 750px) {
   .content {
