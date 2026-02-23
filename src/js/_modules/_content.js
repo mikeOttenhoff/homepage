@@ -4,7 +4,9 @@ import { ui_elements, export_carousel } from "./_components/carousel/main.js";
 
 export const content = function () {
   const contentEntries = Object.entries(content_database);
+
   const content_container = document.querySelector(".content_container");
+  if (!content_container) return;
 
   function appendLink(container, href, text) {
     if (!href) return;
