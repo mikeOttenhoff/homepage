@@ -3,10 +3,12 @@ import { content_database } from "./_content_database.js";
 import { ui_elements, export_carousel } from "./_components/carousel/main.js";
 
 export const content = function () {
-  const contentEntries = Object.entries(content_database);
+  if (!document.body.classList.contains("page-home")) return;
 
   const content_container = document.querySelector(".content_container");
   if (!content_container) return;
+
+  const contentEntries = Object.entries(content_database);
 
   function appendLink(container, href, text) {
     if (!href) return;

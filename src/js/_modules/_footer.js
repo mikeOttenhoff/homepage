@@ -17,8 +17,8 @@ export const footer = function () {
 
   const menuItems = [
     {
-      name: "Neem contact op",
-      url: "mailto:mikeottenhoff@outlook.com",
+      name: "Home",
+      url: "/",
     },
     {
       name: "algemene voorwaarden",
