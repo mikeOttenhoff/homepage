@@ -14,10 +14,10 @@ module.exports = {
   mode: "production",
   entry: "./src/js/main.js", // Make sure this file exists
   output: {
-    path: path.resolve(__dirname, "dist"),
     filename: "js/main.[contenthash].js",
+    path: path.resolve(__dirname, "dist"),
     clean: true,
-    publicPath: "./",
+    publicPath: "/", // <--- absolute paths
   },
   plugins: [
     // Main index.html
