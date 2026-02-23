@@ -20,29 +20,31 @@ module.exports = (env, argv) => {
     entry: "./src/js/main.js",
 
     output: {
-      filename: "js/main.js",
+      filename: isProduction ? "js/main.[contenthash].js" : "js/main.js",
       path: path.resolve(__dirname, "dist"),
       clean: true,
       publicPath: "./",
     },
 
-    devServer: {
-      static: {
-        directory: path.join(__dirname, "public"), // serve static files from public
-        publicPath: "/",
-      },
-      watchFiles: [
-        "src/**/*", // watch all source files (JS, CSS, templates)
-        "src/pages/**/*.html", // watch page templates
-      ],
-      devMiddleware: {
-        writeToDisk: true, // write files to disk (optional)
-      },
-      open: true,
-      hot: false,
-      liveReload: true,
-      historyApiFallback: false, // serve static files normally
-    },
+    devServer: isProduction
+      ? undefined
+      : {
+          static: {
+            directory: path.join(__dirname, "public"), // serve static files from public
+            publicPath: "/",
+          },
+          watchFiles: [
+            "src/**/*", // watch all source files (JS, CSS, templates)
+            "src/pages/**/*.html", // watch page templates
+          ],
+          devMiddleware: {
+            writeToDisk: true, // write files to disk (optional)
+          },
+          open: true,
+          hot: false,
+          liveReload: true,
+          historyApiFallback: false, // serve static files normally
+        },
 
     plugins: [
       // Main index.html
@@ -65,15 +67,19 @@ module.exports = (env, argv) => {
 
       // Extract CSS into a separate file
       new MiniCssExtractPlugin({
-        filename: "css/main.css",
+        filename: isProduction ? "css/main.[contenthash].css" : "css/main.css",
       }),
 
       new CopyWebpackPlugin({
         patterns: [
           {
-            from: "public",
-            to: "",
+            from: path.resolve(__dirname, "public"),
+            to: "", // copy into dist root
             noErrorOnMissing: true,
+            globOptions: {
+              dot: true,
+              gitignore: true,
+            },
           },
         ],
       }),
@@ -106,13 +112,13 @@ module.exports = (env, argv) => {
           },
         },
 
-        // Static HTML from public (excluding src/img)
-        {
-          test: /\.html$/,
-          include: path.resolve(__dirname, "public"),
-          exclude: path.resolve(__dirname, "src/img"),
-          type: "asset/resource",
-        },
+        // // Static HTML from public (excluding src/img)
+        // {
+        //   test: /\.html$/,
+        //   include: path.resolve(__dirname, "public"),
+        //   exclude: path.resolve(__dirname, "src/img"),
+        //   type: "asset/resource",
+        // },
       ],
     },
 

@@ -121,8 +121,8 @@ export const content = function () {
         case "youtube":
           element = document.createElement("iframe");
           element.src = `https://www.youtube.com/embed/${media.id}?autoplay=0&mute=1`;
-          element.allow =
-            "clipboard-write; encrypted-media; picture-in-picture";
+          // element.allow =
+          //   "clipboard-write; encrypted-media; picture-in-picture";
           element.allowFullscreen = true;
           element.style.width = "100%";
           element.style.aspectRatio = "16 / 9";
