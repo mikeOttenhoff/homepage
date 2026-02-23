@@ -1,6 +1,8 @@
 export const elements = function () {
   const body = document.body;
 
+  if (!body.classList.contains("page-home")) return;
+
   const container = document.createElement("div");
   container.classList.add("container");
 
