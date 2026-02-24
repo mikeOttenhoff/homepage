@@ -1,6 +1,6 @@
 @use "variables.scss" as *;
 
-$arrow-size: 4rem;
+$arrow-size: clamp(1rem, 5vw, 4rem);
 
 .carousel_body {
   // width: 50%;

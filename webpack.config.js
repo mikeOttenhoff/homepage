@@ -3,6 +3,7 @@ const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 // Automatically find all HTML pages in src/pages
 const pagesDir = path.resolve(__dirname, "src/pages");
@@ -18,6 +19,20 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
     publicPath: "/", // <--- absolute paths
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    port: 3000,
+    open: true,
+    hot: true,
+    historyApiFallback: true,
   },
   plugins: [
     // Main index.html
@@ -56,6 +71,7 @@ module.exports = {
         },
       ],
     }),
+    // new BundleAnalyzerPlugin(),
   ],
   module: {
     rules: [

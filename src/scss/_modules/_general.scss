@@ -1,6 +1,6 @@
 @use "variables.scss" as *;
 
-$padding: clamp(1rem, 2rem, 2vw);
+$padding: clamp(1rem, 2vw, 2rem);
 
 body {
   background-color: $wit;
@@ -8,6 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
+  min-width: 0;
   // flex-direction: column;
 }
 
@@ -70,11 +71,12 @@ body {
   background-color: $wit_1;
   &_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-content: center;
     align-items: center;
     img {
-      width: 30rem;
+      width: 100%;
+      max-width: 30rem;
       object-fit: contain;
       justify-self: end;
     }
@@ -104,7 +106,7 @@ body {
   gap: $padding;
   justify-content: center;
   @media (max-width: 900px) {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   }
 }
 
@@ -195,11 +197,15 @@ body {
   overflow-y: auto;
   img,
   video {
-    width: clamp(50vw, 10rem, 10vw);
+    margin: 0 auto;
+    width: clamp(5rem, 20vw, 50vw);
     background-size: contain;
   }
   .link_container {
     margin: 2rem 0 2rem 0;
+  }
+  .image_container {
+    width: 100%;
   }
   .extra_content {
     width: 100%;
@@ -209,10 +215,14 @@ body {
     gap: 1rem;
     text-align: center;
     p {
-      max-width: clamp(60%, 800px, 60vw);
+      max-width: clamp(300px, 60vw, 800px);
     }
     .keyword_list {
       display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
       gap: 1rem;
       font-size: 1.4rem;
       font-weight: 700;
@@ -220,7 +230,7 @@ body {
       margin-top: 1rem;
     }
     .carousel_container {
-      width: clamp(60vh, 90vw, 30vw);
+      width: clamp(100px, 90vw, 600px);
       justify-self: center;
     }
   }

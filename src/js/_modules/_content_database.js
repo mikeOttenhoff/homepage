@@ -61,12 +61,7 @@ export const content_database = {
     fullscreen: {
       description:
         "Het karakter is gemaakt met Illustrator en de animatie gemaakt met After Effects en de plugin Joystick 'n Sliders. ",
-      media: [
-        {
-          type: "video",
-          src: puffin,
-        },
-      ],
+      media: [],
     },
   },
   lostCities_rekenApp: {

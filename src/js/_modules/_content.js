@@ -50,6 +50,7 @@ export const content = function () {
         type: "image",
         src: img.link,
         alt: img.alt,
+        loading: "lazy",
       }));
 
     if (Array.isArray(mediaItems) && mediaItems.length) {
@@ -105,6 +106,8 @@ export const content = function () {
           element.classList.add("content_img");
           element.src = media.src;
           element.alt = media.alt || "";
+          element.loading = "lazy";
+          element.decoding = "async";
           break;
 
         // 🎥 Local video
@@ -145,13 +148,17 @@ export const content = function () {
             break;
           }
 
-          lottie.loadAnimation({
-            container: element,
-            renderer: "svg",
-            loop: true,
-            autoplay: true,
-            path: lottiePath,
-          });
+          (async () => {
+            const { default: lottie } = await import("lottie-web");
+
+            lottie.loadAnimation({
+              container: element,
+              renderer: "svg",
+              loop: true,
+              autoplay: true,
+              path: lottiePath,
+            });
+          })();
           break;
 
         // Bodymovin Index.html
