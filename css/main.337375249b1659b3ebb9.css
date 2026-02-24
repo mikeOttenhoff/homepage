@@ -6,6 +6,9 @@
 *, *::before, *::after {
   box-sizing: inherit;
 }
+* {
+  outline: 1px solid red;
+}
 
 *,
 *::before,
@@ -88,18 +91,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
+  min-width: 0;
 }
 
 .container {
   width: clamp(200px, 90vw, 1200px);
   height: 100vh;
   display: grid;
-  gap: clamp(1rem, 2rem, 2vw);
+  gap: clamp(1rem, 2vw, 2rem);
 }
 
 .header {
   background-color: #96bf3d;
-  padding: clamp(1rem, 2rem, 2vw);
+  padding: clamp(1rem, 2vw, 2rem);
   align-self: start;
   display: grid;
   grid-template-columns: 1fr;
@@ -154,12 +158,13 @@ body {
 }
 .aboutMe_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   justify-content: center;
   align-items: center;
 }
 .aboutMe_container img {
-  width: 30rem;
+  width: 100%;
+  max-width: 30rem;
   -o-object-fit: contain;
      object-fit: contain;
   justify-self: end;
@@ -167,15 +172,15 @@ body {
 .aboutMe_textContainer {
   background-color: #ee3124;
   align-self: end;
-  padding: clamp(1rem, 2rem, 2vw);
+  padding: clamp(1rem, 2vw, 2rem);
   display: flex;
   flex-direction: column;
 }
 .aboutMe_contactBtn {
   cursor: pointer;
-  margin-top: clamp(1rem, 2rem, 2vw);
+  margin-top: clamp(1rem, 2vw, 2rem);
   margin-right: auto;
-  padding: clamp(1rem, 2rem, 2vw);
+  padding: clamp(1rem, 2vw, 2rem);
   background-color: #96bf3d;
   border-radius: 0.1em;
   font-weight: 800;
@@ -184,18 +189,18 @@ body {
 .content_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1rem, 2rem, 2vw);
+  gap: clamp(1rem, 2vw, 2rem);
   justify-content: center;
 }
 @media (max-width: 900px) {
   .content_container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   }
 }
 
 .content {
   background-color: #96bf3d;
-  padding: clamp(1rem, 2rem, 2vw);
+  padding: clamp(1rem, 2vw, 2rem);
   display: grid;
   justify-items: center;
   align-content: start;
@@ -238,7 +243,7 @@ body {
 }
 .content .link_container a {
   background-color: #ee3124;
-  padding: clamp(1rem, 2rem, 2vw);
+  padding: clamp(1rem, 2vw, 2rem);
   margin-top: 1rem;
   color: #000;
   font-weight: 800;
@@ -271,11 +276,15 @@ body {
 }
 .fullscreen img,
 .fullscreen video {
-  width: clamp(50vw, 10rem, 10vw);
+  margin: 0 auto;
+  width: clamp(5rem, 20vw, 50vw);
   background-size: contain;
 }
 .fullscreen .link_container {
   margin: 2rem 0 2rem 0;
+}
+.fullscreen .image_container {
+  width: 100%;
 }
 .fullscreen .extra_content {
   width: 100%;
@@ -286,10 +295,14 @@ body {
   text-align: center;
 }
 .fullscreen .extra_content p {
-  max-width: clamp(60%, 800px, 60vw);
+  max-width: clamp(300px, 60vw, 800px);
 }
 .fullscreen .extra_content .keyword_list {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
   gap: 1rem;
   font-size: 1.4rem;
   font-weight: 700;
@@ -297,12 +310,12 @@ body {
   margin-top: 1rem;
 }
 .fullscreen .extra_content .carousel_container {
-  width: clamp(60vh, 90vw, 30vw);
+  width: clamp(100px, 90vw, 600px);
   justify-self: center;
 }
 
 .footer {
-  padding: clamp(1rem, 2rem, 2vw);
+  padding: clamp(1rem, 2vw, 2rem);
   align-self: end;
   background-color: rgb(150, 150, 150);
   display: flex;
@@ -315,11 +328,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(1rem, 2rem, 2vw);
+  gap: clamp(1rem, 2vw, 2rem);
   cursor: pointer;
-  font-size: clamp(1rem, 2rem, 2vw);
+  font-size: clamp(1rem, 2vw, 2rem);
   font-weight: 800;
-  margin-bottom: clamp(1rem, 2rem, 2vw);
+  margin-bottom: clamp(1rem, 2vw, 2rem);
   transition: all 300ms ease-in-out;
 }
 .footer_menu a {
@@ -336,7 +349,7 @@ body {
 }
 .algemeneVoorwaarden .header_av {
   background-color: #aed659;
-  padding: clamp(1rem, 2rem, 2vw);
+  padding: clamp(1rem, 2vw, 2rem);
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -389,7 +402,7 @@ body {
 
 .arrow_left {
   left: 2rem;
-  width: 4rem;
+  width: clamp(1rem, 5vw, 4rem);
   justify-self: flex-start;
   margin-right: auto;
   transform: scale(1);
@@ -397,7 +410,7 @@ body {
 
 .arrow_right {
   right: 2rem;
-  width: 4rem;
+  width: clamp(1rem, 5vw, 4rem);
   justify-self: flex-end;
   transform: scale(1);
 }
