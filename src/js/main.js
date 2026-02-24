@@ -5,8 +5,11 @@ import { aboutMe } from "./_modules/_aboutMe.js";
 import { content } from "./_modules/_content.js";
 import { footer } from "./_modules/_footer.js";
 
-elements();
-header();
-aboutMe();
-content();
+if (document.body.classList.contains("page-home")) {
+  elements();
+  header();
+  aboutMe();
+  content();
+}
+
 footer();
