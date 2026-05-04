@@ -16,8 +16,8 @@ export const header = function () {
       url: "mailto:mikeottenhoff@outlook.com",
     },
     {
-      name: "github",
-      url: "https://github.com/mikeOttenhoff",
+      name: "soundcloud",
+      url: "https://soundcloud.com/mike-ottenhoff",
       external: true,
     },
   ];
