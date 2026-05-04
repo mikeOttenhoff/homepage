@@ -28,7 +28,7 @@ export const content_database = {
     // fullscreen
     fullscreen: {
       description:
-        "Voor 'De Gouden Lotus Awards' is er een nieuw logo bedacht. Dit logo wordt gebruikt op o.a. de website, advertenties en nog veel meer. Hier een kleine greep van de content die voor dit project gemaakt zijn.",
+        "Voor 'de Gouden Lotus Awards' heb ik een nieuw logo ontworpen en deze doorvertaald naar diverse communicatiemiddelen, zoals de website en advertenties. Hierbij stond een herkenbare, sterke uitstraling centraal. Hieronder een selectie van het werk.",
       media: [
         {
           type: "image",
@@ -48,22 +48,6 @@ export const content_database = {
       ],
     },
   },
-  papegaaiDuiker: {
-    title: "Papegaai duiker",
-    textContent:
-      "Een animatie gemaakt met After Effects en de plugin Joystick 'n Sliders",
-    img: { type: "video", src: puffin },
-    link: "",
-    link_name: "",
-    github_link: "",
-    keyWords: ["After Effects, Joystick 'n sliders, animatie"],
-    // fullscreen
-    fullscreen: {
-      description:
-        "Het karakter is gemaakt met Illustrator en de animatie gemaakt met After Effects en de plugin Joystick 'n Sliders. ",
-      media: [],
-    },
-  },
   lostCities_rekenApp: {
     title: "Lost Cities, reken app",
     textContent:
@@ -77,7 +61,7 @@ export const content_database = {
   galileo: {
     title: "Galileo",
     textContent:
-      "De (Motion) Graphics voor 3 seizoenen Galileo samengevat in 3 complilaties",
+      "Voor Galileo heb ik de motion graphics voor drie seizoenen ontworpen, met een focus op duidelijke visuele ondersteuning van de content.",
     img: { type: "youtube", id: "gRAPgTZhdJE" },
     link: "",
     link_name: "",
@@ -86,7 +70,7 @@ export const content_database = {
     // fullscreen
     fullscreen: {
       description:
-        "Bij kennis en weetjes programma 'Galileo' heb ik 3 seizoenen diverse Motion graphic content gemaakt.",
+        "Bij kennis en weetjes programma 'Galileo' heb ik de motion graphics voor drie seizoenen ontworpen, met een focus op duidelijke visuele ondersteuning van de content.",
       media: [
         {
           type: "youtube",
@@ -106,22 +90,9 @@ export const content_database = {
   canva: {
     title: "Canva",
     textContent:
-      "Een test opdracht voor Canva. Gemaakt naar Canva's styleguide en extra voorwaarden",
+      "Een opdracht voor Canva die uiteindelijk niet begruikt is. Gemaakt naar Canva's styleguide en extra voorwaarden",
     img: { type: "html", src: canva },
     className: "canvaOpdracht",
-    link: "",
-    link_name: "",
-    github_link: "",
-    keyWords: ["After Effects, Lottie, Bodymovin"],
-  },
-  hypovak2021: {
-    title: "Hypovak 2021, Online banner",
-    textContent:
-      "Een online banner voor HypoVak 2021 met een man die van alles in zijn leven probeert hoog te houden",
-    img: {
-      type: "lottie",
-      json: "./hypovak2021/banner_website_336x280.json",
-    },
     link: "",
     link_name: "",
     github_link: "",
@@ -130,7 +101,7 @@ export const content_database = {
   beleggersFair: {
     title: "BeleggersFair, video promo's",
     textContent:
-      "Een verzameling promotie videos voor de BeleggersFair, een beleggers evenement.",
+      "Toen ik voor Cash werkte heb ik door de jaren heen promo video's gemaakt voor het evenement BeleggersFair, een evenement voor beleggers.",
     img: { type: "youtube", id: "6u2cH7ktUP4" },
     link: "",
     link_name: "",
@@ -174,7 +145,7 @@ export const content_database = {
   hypovak: {
     title: "HypoVak, video promo's",
     textContent:
-      "Een verzameling promotie videos voor hypotheek evenement HypoVak.",
+      "Toen ik voor InFinance werkte heb ik door de jaren heen promo video's gemaakt voor het evenement HypoVak.",
     img: { type: "youtube", id: "LVA4AuT985k" },
     link: "",
     link_name: "",

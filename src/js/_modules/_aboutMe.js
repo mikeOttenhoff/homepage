@@ -19,9 +19,14 @@ export const aboutMe = function () {
   const aboutMe_title = document.createElement("h2");
   aboutMe_title.textContent = "Over Mij";
 
-  const aboutMe_textContent = document.createElement("p");
-  aboutMe_textContent.textContent =
-    "Mijn naam is Mike en ik ben freelance multimediavormgever. Met ruim 10 jaar vormgeef ervaring die alle richtingen opgaat kan ik je zeker helpen. Hieronder vindt je wat van mijn meest recente werk.";
+  const aboutMe_textContent = document.createElement("div");
+  const aboutMe_textContent_p1 = document.createElement("p");
+  aboutMe_textContent_p1.textContent =
+    "Hoi, ik ben Mike — freelance multimedia vormgever. Ik werk graag aan uiteenlopende projecten en help bedrijven om hun ideeën te vertalen naar heldere en aantrekkelijke visuals. ";
+  const aboutMe_textContent_p2 = document.createElement("p");
+  aboutMe_textContent_p2.textContent =
+    "Op zoek naar een vormgever die meedenkt en snel schakelt? Stuur gerust een bericht — ik denk graag met je mee.";
+  aboutMe_textContent.append(aboutMe_textContent_p1, aboutMe_textContent_p2);
 
   const aboutMe_contactBtn = document.createElement("a");
   aboutMe_contactBtn.href = "mailto:mikeottenhoff@outlook.com";
