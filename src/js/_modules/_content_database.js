@@ -48,16 +48,16 @@ export const content_database = {
       ],
     },
   },
-  lostCities_rekenApp: {
-    title: "Lost Cities, reken app",
-    textContent:
-      "Een reken app voor Lost Cities, een kaartspel voor twee spelers waar je op expeditie gaat en deze expeditie winstgevend moet maken.",
-    img: { type: "image", src: jungle },
-    link: "https://mikeottenhoff.github.io/lostCities_points/",
-    link_name: "Lost cities, punten teller",
-    github_link: "https://github.com/mikeOttenhoff/lostCities_points",
-    keyWords: ["HTML, SCSS, CSS, Javascript"],
-  },
+  // lostCities_rekenApp: {
+  //   title: "Lost Cities, reken app",
+  //   textContent:
+  //     "Een reken app voor Lost Cities, een kaartspel voor twee spelers waar je op expeditie gaat en deze expeditie winstgevend moet maken.",
+  //   img: { type: "image", src: jungle },
+  //   link: "https://mikeottenhoff.github.io/lostCities_points/",
+  //   link_name: "Lost cities, punten teller",
+  //   github_link: "https://github.com/mikeOttenhoff/lostCities_points",
+  //   keyWords: ["HTML, SCSS, CSS, Javascript"],
+  // },
   galileo: {
     title: "Galileo",
     textContent:
@@ -90,7 +90,7 @@ export const content_database = {
   canva: {
     title: "Canva",
     textContent:
-      "Een opdracht voor Canva die uiteindelijk niet begruikt is. Gemaakt naar Canva's styleguide en extra voorwaarden",
+      "Een opdracht voor Canva die uiteindelijk niet gebruikt is. Gemaakt naar Canva's styleguide en extra voorwaarden",
     img: { type: "html", src: canva },
     className: "canvaOpdracht",
     link: "",
@@ -182,30 +182,30 @@ export const content_database = {
       ],
     },
   },
-  scouting: {
-    title: "Scouting posters",
-    textContent: "Promo posters voor mijn scouting vereniging",
-    img: { type: "image", src: scoutingPoster1 },
-    link: "",
-    link_name: "",
-    github_link: "",
-    keyWords: ["Advertentie"],
-    // fullscreen
-    fullscreen: {
-      description:
-        "Promotie materiaal gebaseerd op bekende oude posters, aangepast als oproep materiaal voor mijn scouting groep.",
-      media: [
-        {
-          type: "image",
-          src: scoutingPoster1,
-          alt: "Montgomery poster voor scouting",
-        },
-        {
-          type: "image",
-          src: scoutingPoster2,
-          alt: "We can do it poster voor scouting",
-        },
-      ],
-    },
-  },
+  // scouting: {
+  //   title: "Scouting posters",
+  //   textContent: "Promo posters voor mijn scouting vereniging",
+  //   img: { type: "image", src: scoutingPoster1 },
+  //   link: "",
+  //   link_name: "",
+  //   github_link: "",
+  //   keyWords: ["Advertentie"],
+  //   // fullscreen
+  //   fullscreen: {
+  //     description:
+  //       "Promotie materiaal gebaseerd op bekende oude posters, aangepast als oproep materiaal voor mijn scouting groep.",
+  //     media: [
+  //       {
+  //         type: "image",
+  //         src: scoutingPoster1,
+  //         alt: "Montgomery poster voor scouting",
+  //       },
+  //       {
+  //         type: "image",
+  //         src: scoutingPoster2,
+  //         alt: "We can do it poster voor scouting",
+  //       },
+  //     ],
+  //   },
+  // },
 };
