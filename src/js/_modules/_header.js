@@ -12,11 +12,12 @@ export const header = function () {
 
   const menuItems = [
     {
-      name: "Neem contact op",
-      url: "mailto:mikeottenhoff@outlook.com",
+      name: "Dribbble",
+      url: "https://dribbble.com/jaden54",
+      external: true,
     },
     {
-      name: "soundcloud",
+      name: "Soundcloud",
       url: "https://soundcloud.com/mike-ottenhoff",
       external: true,
     },

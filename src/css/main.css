@@ -99,6 +99,7 @@ body {
 }
 
 .header {
+  height: 15rem;
   background-color: #96bf3d;
   padding: clamp(1rem, 2vw, 2rem);
   align-self: start;
@@ -107,6 +108,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+@media (max-width: 800px) {
+  .header {
+    height: auto;
+  }
 }
 .header_menu {
   grid-column: 2/3;
@@ -121,7 +127,7 @@ body {
   transition: all 300ms ease-out;
 }
 .header_menu a:hover {
-  transform: scale(1.1);
+  font-weight: 600;
 }
 @media (max-width: 800px) {
   .header_menu {
@@ -159,6 +165,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 800px) {
+  .aboutMe_container {
+    grid-template-columns: 1fr;
+  }
+}
 .aboutMe_container img {
   width: 100%;
   max-width: 30rem;
@@ -173,6 +184,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.aboutMe_textContainer p {
+  margin-bottom: 1rem;
+}
 .aboutMe_contactBtn {
   cursor: pointer;
   margin-top: clamp(1rem, 2vw, 2rem);
@@ -181,6 +195,12 @@ body {
   background-color: #96bf3d;
   border-radius: 0.1em;
   font-weight: 800;
+  transform: scale(1);
+  transition: all 300ms ease-out;
+}
+.aboutMe_contactBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .content_container {
