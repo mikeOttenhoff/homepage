@@ -183,9 +183,20 @@ body {
   padding: clamp(1rem, 2vw, 2rem);
   display: flex;
   flex-direction: column;
+  transform: scale(1);
 }
 .aboutMe_textContainer p {
   margin-bottom: 1rem;
+}
+.aboutMe_textContainer .extraLinks {
+  cursor: pointer;
+  font-weight: 900;
+  text-decoration: underline;
+  transition: all 300ms ease-out;
+  transform: scale(1);
+}
+.aboutMe_textContainer .extraLinks:hover {
+  transform: scale(1.03);
 }
 .aboutMe_contactBtn {
   cursor: pointer;

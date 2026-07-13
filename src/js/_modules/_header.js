@@ -12,8 +12,8 @@ export const header = function () {
 
   const menuItems = [
     {
-      name: "Dribbble",
-      url: "https://dribbble.com/jaden54",
+      name: "Behance",
+      url: "https://www.behance.net/mikeottenhoff",
       external: true,
     },
     {

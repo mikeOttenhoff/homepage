@@ -26,7 +26,35 @@ export const aboutMe = function () {
   const aboutMe_textContent_p2 = document.createElement("p");
   aboutMe_textContent_p2.textContent =
     "Op zoek naar een vormgever die meedenkt en snel schakelt? Stuur gerust een bericht — ik denk graag met je mee.";
-  aboutMe_textContent.append(aboutMe_textContent_p1, aboutMe_textContent_p2);
+  const aboutMe_textContent_p3 = document.createElement("p");
+  aboutMe_textContent_p3.textContent = "Bekijk ook mijn ";
+
+  const behanceLink = document.createElement("a");
+  behanceLink.classList.add("extraLinks");
+  behanceLink.href = "https://www.behance.net/jouwgebruikersnaam";
+  behanceLink.target = "_blank";
+  behanceLink.rel = "noopener noreferrer";
+  behanceLink.textContent = "Behance";
+
+  const soundcloudLink = document.createElement("a");
+  soundcloudLink.classList.add("extraLinks");
+  soundcloudLink.href = "https://soundcloud.com/jouwgebruikersnaam";
+  soundcloudLink.target = "_blank";
+  soundcloudLink.rel = "noopener noreferrer";
+  soundcloudLink.textContent = "SoundCloud";
+
+  aboutMe_textContent_p3.appendChild(behanceLink);
+  aboutMe_textContent_p3.append(" en ");
+  aboutMe_textContent_p3.appendChild(soundcloudLink);
+  aboutMe_textContent_p3.append(
+    " voor meer van mijn creatieve werk en persoonlijke projecten.",
+  );
+
+  aboutMe_textContent.append(
+    aboutMe_textContent_p1,
+    aboutMe_textContent_p2,
+    aboutMe_textContent_p3,
+  );
 
   const aboutMe_contactBtn = document.createElement("a");
   aboutMe_contactBtn.href = "mailto:mikeottenhoff@outlook.com";
