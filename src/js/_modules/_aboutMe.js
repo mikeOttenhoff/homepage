@@ -31,14 +31,14 @@ export const aboutMe = function () {
 
   const behanceLink = document.createElement("a");
   behanceLink.classList.add("extraLinks");
-  behanceLink.href = "https://www.behance.net/jouwgebruikersnaam";
+  behanceLink.href = "https://www.behance.net/mikeottenhoff";
   behanceLink.target = "_blank";
   behanceLink.rel = "noopener noreferrer";
   behanceLink.textContent = "Behance";
 
   const soundcloudLink = document.createElement("a");
   soundcloudLink.classList.add("extraLinks");
-  soundcloudLink.href = "https://soundcloud.com/jouwgebruikersnaam";
+  soundcloudLink.href = "https://soundcloud.com/mike-ottenhoff";
   soundcloudLink.target = "_blank";
   soundcloudLink.rel = "noopener noreferrer";
   soundcloudLink.textContent = "SoundCloud";
