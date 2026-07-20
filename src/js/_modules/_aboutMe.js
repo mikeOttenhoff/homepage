@@ -22,10 +22,10 @@ export const aboutMe = function () {
   const aboutMe_textContent = document.createElement("div");
   const aboutMe_textContent_p1 = document.createElement("p");
   aboutMe_textContent_p1.textContent =
-    "Hoi, ik ben Mike — freelance multimedia vormgever. Ik werk graag aan uiteenlopende projecten en help bedrijven om hun ideeën te vertalen naar heldere en aantrekkelijke visuals. ";
+    "Hoi, ik ben Mike, freelance multimedia vormgever. Ik help bedrijven om hun ideeën te vertalen naar heldere en aantrekkelijke visuals. ";
   const aboutMe_textContent_p2 = document.createElement("p");
   aboutMe_textContent_p2.textContent =
-    "Op zoek naar een vormgever die meedenkt en snel schakelt? Stuur gerust een bericht — ik denk graag met je mee.";
+    "Op zoek naar een vormgever die meedenkt en snel schakelt? Stuur gerust een bericht, ik denk graag met je mee.";
   const aboutMe_textContent_p3 = document.createElement("p");
   aboutMe_textContent_p3.textContent = "Bekijk ook mijn ";
 
